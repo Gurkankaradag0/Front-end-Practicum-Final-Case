@@ -13,9 +13,9 @@ function Layout() {
   return (
     <>
         <Header ref={headerRef} />
-        <div onClick={() => setClose()}>
-          <div className={isOpen ? 'pointer-events-none opacity-50' : ''}>
-            <Outlet />
+        <div onClick={() => setClose()} className="flex min-h-[80%]">
+          <div className={`${isOpen ? 'pointer-events-none opacity-50 ' : ''}flex flex-1 flex-col`}>
+            <div className="flex-1"><Outlet /></div>
             <Footer />
           </div>
         </div>
