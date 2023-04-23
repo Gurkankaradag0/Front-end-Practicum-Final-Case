@@ -56,7 +56,7 @@ function SearchInput({setInputFocus}) {
                         <Icon name="search" />
                     </button>
                     <p 
-                        className={`${focus ? "hidden" : "uppercase font-bold m-auto text-white/75 group-hover:text-white"}`}
+                        className={`${(focus || width < 512) ? "hidden" : "uppercase font-bold m-auto text-white/75 group-hover:text-white"}`}
                     >Search</p>
                     <input 
                         className={classNames({
@@ -76,8 +76,7 @@ function SearchInput({setInputFocus}) {
                     type="button"
                     className={classNames({
                         'hidden': !focus,
-                        'bg-transparent border-none absolute right-2': focus,
-                        "pr-1 pl-3 right-4": width > 960
+                        'bg-transparent border-none absolute right-2': focus
                     })} 
                 >
                     <div className="w-10 h-10 overflow-hidden relative group">
