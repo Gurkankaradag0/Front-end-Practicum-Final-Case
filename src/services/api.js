@@ -18,7 +18,7 @@ const getPlanets = async (page = 1) => {
             newData.results[index].id = parseInt(url[url.length - 2])
         });
         setPlanetsNextPage(newData.next)
-        addPlanets(newData.results)
+        addPlanets(newData.results.filter(result => result.name !== "unknown"))
         return true
     }
     catch(e) {
