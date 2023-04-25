@@ -1,4 +1,5 @@
 import axios from 'axios'
+import imageData from '~/data'
 import { 
     addPlanets, setPlanetsNextPage, setPlanetsHasMore,
     addShips, setShipsNextPage, setShipsHasMore,
@@ -16,6 +17,7 @@ const getPlanets = async (page = 1) => {
         data.results.forEach((element, index) => {
             const url = element.url.split('/')
             newData.results[index].id = parseInt(url[url.length - 2])
+            newData.results[index].image = imageData.planets.find(planet => planet.name === element.name)?.image
         });
         setPlanetsNextPage(newData.next)
         addPlanets(newData.results.filter(result => result.name !== "unknown"))
@@ -35,6 +37,7 @@ const getShips = async (page = 1) => {
         data.results.forEach((element, index) => {
             const url = element.url.split('/')
             newData.results[index].id = parseInt(url[url.length - 2])
+            newData.results[index].image = imageData.ships.find(ship => ship.name === element.name)?.image
         });
         setShipsNextPage(newData.next)
         addShips(newData.results)
@@ -54,6 +57,7 @@ const getVehicles = async (page = 1) => {
         data.results.forEach((element, index) => {
             const url = element.url.split('/')
             newData.results[index].id = parseInt(url[url.length - 2])
+            newData.results[index].image = imageData.vehicles.find(vehicle => vehicle.name === element.name)?.image
         });
         setVehiclesNextPage(newData.next)
         addVehicles(newData.results)
@@ -73,6 +77,7 @@ const getCharacters = async (page = 1) => {
         data.results.forEach((element, index) => {
             const url = element.url.split('/')
             newData.results[index].id = parseInt(url[url.length - 2])
+            newData.results[index].image = imageData.characters.find(character => character.name === element.name)?.image
         });
         setCharactersNextPage(newData.next)
         addCharacters(newData.results)
@@ -92,6 +97,7 @@ const getFilms = async (page = 1) => {
         data.results.forEach((element, index) => {
             const url = element.url.split('/')
             newData.results[index].id = parseInt(url[url.length - 2])
+            newData.results[index].image = imageData.films.find(film => film.name === element.title)?.image
         });
         setFilmsNextPage(newData.next)
         addFilms(newData.results)
@@ -111,6 +117,7 @@ const getRaces = async (page = 1) => {
         data.results.forEach((element, index) => {
             const url = element.url.split('/')
             newData.results[index].id = parseInt(url[url.length - 2])
+            newData.results[index].image = imageData.races.find(race => race.name === element.name)?.image
         });
         setRacesNextPage(newData.next)
         addRaces(newData.results)

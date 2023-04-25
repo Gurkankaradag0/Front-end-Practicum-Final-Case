@@ -1,12 +1,7 @@
 import { useMemo } from "react"
 import { Link } from "react-router-dom"
-import data from '~/data'
 
 function Row({ result, category }) {
-
-  const models = useMemo(() => {
-    return data[category]
-  }, [])
 
   const title = useMemo(() => {
     return result.name ? result.name : result.title
@@ -17,7 +12,7 @@ function Row({ result, category }) {
       <div className="absolute z-20 w-[150px] left-1/2 -translate-x-3/4 max-h-[150px] h-full pointer-events-none">
         <div className="flex absolute items-center pointer-events-none select-none top-1/2 right-0 -translate-y-1/2 -translate-x-[130px] max-[750px]:-translate-x-[110px] max-[650px]:-translate-x-[100px] max-[550px]:-translate-x-[90px] max-[450px]:-translate-x-[80px] max-[350px]:-translate-x-[70px] max-[300px]:-translate-x-[50px]">
           <img 
-            src={models.find(model => model.name.includes(title))?.image} 
+            src={result.image} 
             alt={title} 
             className="object-contain object-[center_right]" 
             loading="lazy"
