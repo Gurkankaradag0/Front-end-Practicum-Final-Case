@@ -20,7 +20,7 @@ function Layout() {
           </div>
         </div>
         {
-          (width <= 768 && isOpen) && (
+          (width <= 960 && isOpen) && (
             <Navbar headerRef={headerRef} />
           )
         }
