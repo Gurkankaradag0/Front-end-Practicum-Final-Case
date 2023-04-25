@@ -1,6 +1,8 @@
 import Star_Destroyer from "~/assets/ships/Star Destroyer.png"
 import Death_Star from "~/assets/ships/Death Star.png"
 import Millennium_Falcon from "~/assets/ships/Millennium Falcon.png"
+import Y_wing from "~/assets/ships/Y-wing.png"
+import X_wing from "~/assets/ships/X-wing.png"
 import Executor from "~/assets/ships/Executor.png"
 import Imperial_shuttle from "~/assets/ships/Imperial shuttle.png"
 import EF76_Nebulon_B_escort_frigate from "~/assets/ships/EF76 Nebulon-B escort frigate.png"
@@ -11,7 +13,7 @@ import Naboo_fighter from "~/assets/ships/Naboo fighter.png"
 import J_type_diplomatic_barge from "~/assets/ships/J-type diplomatic barge.png"
 import AA_9_Coruscant_freighter from "~/assets/ships/AA-9 Coruscant freighter.png"
 import Jedi_starfighter from "~/assets/ships/Jedi starfighter.png"
-import H_type_Nubian_yacht from "~/assets/ships/H-type Nubian yachtr.png"
+import H_type_Nubian_yacht from "~/assets/ships/H-type Nubian yacht.png"
 import Theta_class_T_2c_shuttle from "~/assets/ships/Theta-class T-2c shuttle.png"
 import Republic_attack_cruiser from "~/assets/ships/Republic attack cruiser.png"
 import Banking_clan_frigte from "~/assets/ships/Banking clan frigte.png"
@@ -40,11 +42,11 @@ const ships = [
     },
     {
         name: "Y-wing",
-        image: "https://static.wikia.nocookie.net/yildizsavaslari/images/8/81/Y-wing.png/revision/latest/scale-to-width-down/350?cb=20201229090058&path-prefix=tr"
+        image: Y_wing
     },
     {
         name: "X-wing",
-        image: "https://static.wikia.nocookie.net/yildizsavaslari/images/b/b2/X-wing_2_Fathead.png/revision/latest/scale-to-width-down/350?cb=20210330110448&path-prefix=tr"
+        image: X_wing
     },
     {
         name: "TIE Advanced x1",

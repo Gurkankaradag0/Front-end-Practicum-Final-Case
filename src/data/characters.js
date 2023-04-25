@@ -19,6 +19,16 @@ import Lama_Su from '~/assets/characters/Lama Su.png'
 import Taun_We from '~/assets/characters/Taun We.png'
 import Jocasta_Nu from '~/assets/characters/Jocasta Nu.png'
 import Grievous from '~/assets/characters/Grievous.png'
+import Wedge_Antilles from '~/assets/characters/Wedge Antilles.png'
+import Yoda from '~/assets/characters/Yoda.png'
+import Boba_Fett from '~/assets/characters/Boba Fett.png'
+import Wicket_Systri_Warrick from '~/assets/characters/Wicket Systri Warrick.png'
+import Nute_Gunray from '~/assets/characters/Nute Gunray.png'
+import Finis_Valorum from '~/assets/characters/Finis Valorum.png'
+import Jar_Jar_Binks from '~/assets/characters/Jar Jar Binks.png'
+import Ki_Adi_Mundi from '~/assets/characters/Ki-Adi-Mundi.png'
+import Eeth_Koth from '~/assets/characters/Eeth Koth.png'
+import Luminara_Unduli from '~/assets/characters/Luminara Unduli.png'
 
 const characters = [
     {
@@ -87,7 +97,7 @@ const characters = [
     },
     {
         name: "Wedge Antilles",
-        image: "https://static.wikia.nocookie.net/p__/images/6/61/Dbvg.png/revision/latest/scale-to-width-down/246?cb=20200207002729&path-prefix=protagonist"
+        image: Wedge_Antilles
     },
     {
         name: "Jek Tono Porkins",
@@ -95,7 +105,7 @@ const characters = [
     },
     {
         name: "Yoda",
-        image: "https://static.wikia.nocookie.net/yildizsavaslari/images/c/c3/Yoda_TPM_RotS.png/revision/latest/scale-to-width-down/350?cb=20201018024212&path-prefix=tr"
+        image: Yoda
     },
     {
         name: "Palpatine",
@@ -103,7 +113,7 @@ const characters = [
     },
     {
         name: "Boba Fett",
-        image: "https://static.wikia.nocookie.net/yildizsavaslari/images/9/9e/BobaFettRepaintedArmor-SS.png/revision/latest/scale-to-width-down/302?cb=20211208183954&path-prefix=tr"
+        image: Boba_Fett
     },
     {
         name: "IG-88",
@@ -135,7 +145,7 @@ const characters = [
     },
     {
         name: "Wicket Systri Warrick",
-        image: "https://static.wikia.nocookie.net/p__/images/4/45/Wicket_detail.png/revision/latest/scale-to-width-down/296?cb=20181117182827&path-prefix=protagonist"
+        image: Wicket_Systri_Warrick
     },
     {
         name: "Nien Nunb",
@@ -147,11 +157,11 @@ const characters = [
     },
     {
         name: "Nute Gunray",
-        image: "https://static.wikia.nocookie.net/yildizsavaslari/images/f/fd/Nute_Gunray_SWE.png/revision/latest/scale-to-width-down/350?cb=20210412212337&path-prefix=tr"
+        image: Nute_Gunray
     },
     {
         name: "Finis Valorum",
-        image: "https://static.wikia.nocookie.net/yildizsavaslari/images/5/51/ValorumPortrait-SWE.png/revision/latest/scale-to-width-down/350?cb=20210524140815&path-prefix=tr"
+        image: Finis_Valorum
     },
     {
         name: "Padmé Amidala",
@@ -159,7 +169,7 @@ const characters = [
     },
     {
         name: "Jar Jar Binks",
-        image: "https://static.wikia.nocookie.net/p__/images/6/69/Jar_Jar_Binks.png/revision/latest/scale-to-width-down/206?cb=20190514062237&path-prefix=protagonist"
+        image: Jar_Jar_Binks
     },
     {
         name: "Roos Tarpals",
@@ -223,7 +233,7 @@ const characters = [
     },
     {
         name: "Ki-Adi-Mundi",
-        image: "https://static.wikia.nocookie.net/yildizsavaslari/images/6/6d/KiAdiMundi-SWCT.png/revision/latest/scale-to-width-down/350?cb=20211028160454&path-prefix=tr"
+        image: Ki_Adi_Mundi
     },
     {
         name: "Kit Fisto",
@@ -231,7 +241,7 @@ const characters = [
     },
     {
         name: "Eeth Koth",
-        image: "https://static.wikia.nocookie.net/yildizsavaslari/images/4/4e/EethKothCardTrader.png/revision/latest/scale-to-width-down/350?cb=20211003134755&path-prefix=tr"
+        image: Eeth_Koth
     },
     {
         name: "Adi Gallia",
@@ -271,7 +281,7 @@ const characters = [
     },
     {
         name: "Luminara Unduli",
-        image: "https://static.wikia.nocookie.net/yildizsavaslari/images/2/21/LuminaraHS-SWE_%28new%29.png/revision/latest/scale-to-width-down/350?cb=20210121073931&path-prefix=tr"
+        image: Luminara_Unduli
     },
     {
         name: "Barriss Offee",

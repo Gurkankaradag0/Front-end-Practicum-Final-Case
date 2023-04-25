@@ -1,6 +1,9 @@
 import Rodian from '~/assets/races/Rodian.png'
 import Zabrak from '~/assets/races/Zabrak.png'
 import Kaleesh from '~/assets/races/Kaleesh.png'
+import Yoda from '~/assets/characters/Yoda.png'
+import Vulptereen from '~/assets/races/Vulptereen.png'
+import Kel_Dor from '~/assets/races/Kel Dor.png'
 
 const races = [
     {
@@ -25,7 +28,7 @@ const races = [
     },
     {
         name: "Yoda's species",
-        image: "https://static.wikia.nocookie.net/yildizsavaslari/images/c/c3/Yoda_TPM_RotS.png/revision/latest/scale-to-width-down/350?cb=20201018024212&path-prefix=tr"
+        image: Yoda
     },
     {
         name: "Trandoshan",
@@ -69,7 +72,7 @@ const races = [
     },
     {
         name: "Vulptereen",
-        image: "https://static.wikia.nocookie.net/starwars/images/c/cd/Dud_Bolt_FF_Scan.png"
+        image: Vulptereen
     },
     {
         name: "Xexto",
@@ -105,7 +108,7 @@ const races = [
     },
     {
         name: "Kel Dor",
-        image: "https://static.wikia.nocookie.net/yildizsavaslari/images/f/fd/Plokoon_detail.png/revision/latest/scale-to-width-down/273?cb=20190820131534&path-prefix=tr"
+        image: Kel_Dor
     },
     {
         name: "Chagrian",

@@ -17,7 +17,7 @@ import DGunShip from '~/assets/vehicles/Droid gunship.png'
 const vehicles = [
     {
         name: "Sand Crawler",
-        "images": Sand_Crawler
+        image: Sand_Crawler
     },
     {
         name: "T-16 skyhopper",
