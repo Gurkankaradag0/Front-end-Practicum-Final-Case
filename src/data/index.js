@@ -1,15 +1,15 @@
 import planets from './planets'
 import vehicles from './vehicles'
-import people from './people'
+import characters from './characters'
 import films from './films'
-import species from './species'
+import races from './races'
 
 const types = {
     planets,
     vehicles,
-    people,
+    characters,
     films,
-    species
+    races
 }
 
 export default types

@@ -3,19 +3,19 @@ const items = [
       title: "planets"
     },
     {
-      title: "spaceships"
+      title: "ships"
     },
     {
       title: "vehicles"
     },
     {
-      title: "people"
+      title: "characters"
     },
     {
       title: "films"
     },
     {
-      title: "species"
+      title: "races"
     },
   ]
 

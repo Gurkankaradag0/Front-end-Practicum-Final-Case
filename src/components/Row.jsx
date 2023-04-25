@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom"
 
-function Row({ result, category, models }) {
+function Row({ result, category }) {
   return (
     <Link to={`/${category}/${result.id}`} className="h-[300px] m-auto w-full max-w-[600px] flex items-center relative">
       <div className="absolute z-20 w-[200px] left-1/2 -translate-x-3/4 max-h-[300px] h-full pointer-events-none">
         <div className="flex absolute items-center pointer-events-none select-none top-1/2 right-0 -translate-y-1/2 -translate-x-[130px]">
-          <img src={models.find(model => model.model.includes(result.model.replaceAll('/', ' ')))?.path} alt={result.name} className="object-contain object-[center_right]" />
+          {/* <img src={models.find(model => model.model.includes(result.model.replaceAll('/', ' ')))?.path} alt={result.name} className="object-contain object-[center_right]" /> */}
         </div>
       </div>
       <div className="w-3/4 h-[85%] rounded-[30px] absolute top-1/2 right-0 -translate-y-1/2">

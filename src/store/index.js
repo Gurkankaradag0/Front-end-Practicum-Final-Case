@@ -3,21 +3,21 @@ import { configureStore } from "@reduxjs/toolkit"
 import navbar from "./navbar"
 
 import planets from "./planets"
-import spaceShips from './spaceShips'
+import ships from './ships'
 import vehicles from "./vehicles"
-import people from "./people"
+import characters from "./characters"
 import films from './films'
-import species from "./species"
+import races from "./races"
 
 const store = configureStore({
     reducer: {
         navbar,
         planets,
-        spaceShips,
+        ships,
         vehicles,
-        people,
+        characters,
         films,
-        species
+        races
     },
     devTools: process.env.NODE_ENV !== 'production',
 })

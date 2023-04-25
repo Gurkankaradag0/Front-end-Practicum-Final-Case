@@ -4,11 +4,11 @@ import Layout from "./components/Layout"
 
 import Home from "./pages/Home"
 import Planets from "./pages/Planets"
-import SpaceShips from "./pages/SpaceShips"
+import Ships from "./pages/Ships"
 import Vehicles from "./pages/Vehicles"
-import People from "./pages/People"
+import Characters from "./pages/Characters"
 import Films from "./pages/Films"
-import Species from "./pages/Species"
+import Races from "./pages/Races"
 
 import Detail from './pages/Detail'
 
@@ -23,24 +23,24 @@ function App() {
           <Route index={true} element={<Planets />}/>
           <Route path=":id" element={<Detail />}/>
         </Route>
-        <Route path="/spaceships">
-          <Route index={true} element={<SpaceShips />}/>
+        <Route path="/ships">
+          <Route index={true} element={<Ships />}/>
           <Route path=":id" element={<Detail />}/>
         </Route>
         <Route path="/vehicles">
           <Route index={true} element={<Vehicles />}/>
           <Route path=":id" element={<Detail />}/>
         </Route>
-        <Route path="/people">
-          <Route index={true} element={<People />}/>
+        <Route path="/characters">
+          <Route index={true} element={<Characters />}/>
           <Route path=":id" element={<Detail />}/>
         </Route>
         <Route path="/films">
           <Route index={true} element={<Films />}/>
           <Route path=":id" element={<Detail />}/>
         </Route>
-        <Route path="/species">
-          <Route index={true} element={<Species />}/>
+        <Route path="/races">
+          <Route index={true} element={<Races />}/>
           <Route path=":id" element={<Detail />}/>
         </Route>
         <Route path='*' element={<Page404 />}/>

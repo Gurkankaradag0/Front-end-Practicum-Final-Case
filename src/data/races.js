@@ -1,8 +1,8 @@
-import Rodian from '~/assets/species/Rodian.png'
-import Zabrak from '~/assets/species/Zabrak.png'
-import Kaleesh from '~/assets/species/Kaleesh.png'
+import Rodian from '~/assets/races/Rodian.png'
+import Zabrak from '~/assets/races/Zabrak.png'
+import Kaleesh from '~/assets/races/Kaleesh.png'
 
-const species = [
+const races = [
     {
         name: "Human",
         image: "https://static.wikia.nocookie.net/starwars/images/c/cb/Corellians_SASWS.png"
@@ -153,4 +153,4 @@ const species = [
     }
 ]
 
-export default species
+export default races

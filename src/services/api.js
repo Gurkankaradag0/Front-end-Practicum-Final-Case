@@ -1,11 +1,11 @@
 import axios from 'axios'
 import { 
     addPlanets, setPlanetsNextPage, setPlanetsHasMore,
-    addSpaceShips, setSpaceShipsNextPage, setSpaceShipsHasMore,
+    addShips, setShipsNextPage, setShipsHasMore,
     addVehicles, setVehiclesNextPage, setVehiclesHasMore,
-    addPeople, setPeopleNextPage, setPeopleHasMore,
+    addCharacters, setCharactersNextPage, setCharactersHasMore,
     addFilms, setFilmsNextPage, setFilmsHasMore,
-    addSpecies, setSpeciesNextPage, setSpeciesHasMore,
+    addRaces, setRacesNextPage, setRacesHasMore,
  } from '~/utils/store'
 
 const getPlanets = async (page = 1) => {
@@ -27,17 +27,17 @@ const getPlanets = async (page = 1) => {
     }
 }
 
-const getSpaceShips = async (page = 1) => {
+const getShips = async (page = 1) => {
     try {
         const { data } = await axios.get(`${import.meta.env.VITE_API_ENDPOINT}/starships/?page=${page}`)
-        setSpaceShipsHasMore(data.next ? true : false)
+        setShipsHasMore(data.next ? true : false)
         const newData = { ...data, next: data.next ? parseInt(data.next.split('=')[1]) : null, previous: data.previous ? parseInt(data.previous.split('=')[1]) : null }
         data.results.forEach((element, index) => {
             const url = element.url.split('/')
             newData.results[index].id = parseInt(url[url.length - 2])
         });
-        setSpaceShipsNextPage(newData.next)
-        addSpaceShips(newData.results)
+        setShipsNextPage(newData.next)
+        addShips(newData.results)
         return true
     }
     catch(e) {
@@ -65,17 +65,17 @@ const getVehicles = async (page = 1) => {
     }
 }
 
-const getPeople = async (page = 1) => {
+const getCharacters = async (page = 1) => {
     try {
         const { data } = await axios.get(`${import.meta.env.VITE_API_ENDPOINT}/people/?page=${page}`)
-        setPeopleHasMore(data.next ? true : false)
+        setCharactersHasMore(data.next ? true : false)
         const newData = { ...data, next: data.next ? parseInt(data.next.split('=')[1]) : null, previous: data.previous ? parseInt(data.previous.split('=')[1]) : null }
         data.results.forEach((element, index) => {
             const url = element.url.split('/')
             newData.results[index].id = parseInt(url[url.length - 2])
         });
-        setPeopleNextPage(newData.next)
-        addPeople(newData.results)
+        setCharactersNextPage(newData.next)
+        addCharacters(newData.results)
         return true
     }
     catch(e) {
@@ -103,17 +103,17 @@ const getFilms = async (page = 1) => {
     }
 }
 
-const getSpecies = async (page = 1) => {
+const getRaces = async (page = 1) => {
     try {
         const { data } = await axios.get(`${import.meta.env.VITE_API_ENDPOINT}/species/?page=${page}`)
-        setSpeciesHasMore(data.next ? true : false)
+        setRacesHasMore(data.next ? true : false)
         const newData = { ...data, next: data.next ? parseInt(data.next.split('=')[1]) : null, previous: data.previous ? parseInt(data.previous.split('=')[1]) : null }
         data.results.forEach((element, index) => {
             const url = element.url.split('/')
             newData.results[index].id = parseInt(url[url.length - 2])
         });
-        setSpeciesNextPage(newData.next)
-        addSpecies(newData.results)
+        setRacesNextPage(newData.next)
+        addRaces(newData.results)
         return true
     }
     catch(e) {
@@ -122,4 +122,4 @@ const getSpecies = async (page = 1) => {
     }
 }
 
-export { getPlanets, getSpaceShips, getVehicles, getPeople, getFilms, getSpecies }
+export { getPlanets, getShips, getVehicles, getCharacters, getFilms, getRaces }

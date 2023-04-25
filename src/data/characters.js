@@ -1,26 +1,26 @@
-import Luke_Skywalker from '~/assets/people/Luke Skywalker.png'
-import Leia_Organa from '~/assets/people/Leia Organa.png'
-import Owen_Lars from '~/assets/people/Owen Lars.png'
-import Biggs_Darklighter from '~/assets/people/Biggs Darklighter.png'
-import Obi_Wan_Kenobi from '~/assets/people/Obi-Wan Kenobi.png'
-import Anakin_Skywalker from '~/assets/people/Anakin Skywalker.png'
-import Wilhuff_Tarkin from '~/assets/people/Wilhuff Tarkin.png'
-import Jek_Tono_Porkins from '~/assets/people/Jek Tono Porkins.png'
-import Bossk from '~/assets/people/Bossk.png'
-import Arvel_Crynyd from '~/assets/people/Arvel Crynyd.png'
-import Padmé_Amidala from '~/assets/people/Padmé Amidala.png'
-import Ric_Olié from '~/assets/people/Ric Olié.png'
-import Dud_Bolt from '~/assets/people/Dud Bolt.png'
-import Cordé from '~/assets/people/Cordé.png'
-import Barriss_Offee from '~/assets/people/Barriss Offee.png'
-import Dooku from '~/assets/people/Dooku.png'
-import Bail_Prestor_Organa from '~/assets/people/Bail Prestor Organa.png'
-import Lama_Su from '~/assets/people/Lama Su.png'
-import Taun_We from '~/assets/people/Taun We.png'
-import Jocasta_Nu from '~/assets/people/Jocasta Nu.png'
-import Grievous from '~/assets/people/Grievous.png'
+import Luke_Skywalker from '~/assets/characters/Luke Skywalker.png'
+import Leia_Organa from '~/assets/characters/Leia Organa.png'
+import Owen_Lars from '~/assets/characters/Owen Lars.png'
+import Biggs_Darklighter from '~/assets/characters/Biggs Darklighter.png'
+import Obi_Wan_Kenobi from '~/assets/characters/Obi-Wan Kenobi.png'
+import Anakin_Skywalker from '~/assets/characters/Anakin Skywalker.png'
+import Wilhuff_Tarkin from '~/assets/characters/Wilhuff Tarkin.png'
+import Jek_Tono_Porkins from '~/assets/characters/Jek Tono Porkins.png'
+import Bossk from '~/assets/characters/Bossk.png'
+import Arvel_Crynyd from '~/assets/characters/Arvel Crynyd.png'
+import Padmé_Amidala from '~/assets/characters/Padmé Amidala.png'
+import Ric_Olié from '~/assets/characters/Ric Olié.png'
+import Dud_Bolt from '~/assets/characters/Dud Bolt.png'
+import Cordé from '~/assets/characters/Cordé.png'
+import Barriss_Offee from '~/assets/characters/Barriss Offee.png'
+import Dooku from '~/assets/characters/Dooku.png'
+import Bail_Prestor_Organa from '~/assets/characters/Bail Prestor Organa.png'
+import Lama_Su from '~/assets/characters/Lama Su.png'
+import Taun_We from '~/assets/characters/Taun We.png'
+import Jocasta_Nu from '~/assets/characters/Jocasta Nu.png'
+import Grievous from '~/assets/characters/Grievous.png'
 
-const people = [
+const characters = [
     {
         name: "Luke Skywalker",
         image: Luke_Skywalker
@@ -351,4 +351,4 @@ const people = [
     }
 ]
 
-export default people
+export default characters

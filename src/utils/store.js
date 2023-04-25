@@ -4,11 +4,11 @@ import store from "~/store"
 import { _setOpen, _setClose } from "~/store/navbar"
 
 import { _addPlanets, _setPlanetsNextPage, _setPlanetsHasMore } from "~/store/planets"
-import { _addSpaceShips, _setSpaceShipsNextPage, _setSpaceShipsHasMore } from "~/store/spaceShips"
+import { _addShips, _setShipsNextPage, _setShipsHasMore } from "~/store/ships"
 import { _addVehicles, _setVehiclesNextPage, _setVehiclesHasMore } from "~/store/vehicles"
-import { _addPeople, _setPeopleNextPage, _setPeopleHasMore } from "~/store/people"
+import { _addCharacters, _setCharactersNextPage, _setCharactersHasMore } from "~/store/characters"
 import { _addFilms, _setFilmsNextPage, _setFilmsHasMore } from "~/store/films"
-import { _addSpecies, _setSpeciesNextPage, _setSpeciesHasMore } from "~/store/species"
+import { _addRaces, _setRacesNextPage, _setRacesHasMore } from "~/store/races"
 
 // Navbar
 export const useNavbar = () => useSelector(state => state.navbar)
@@ -23,13 +23,13 @@ export const addPlanets = planets => store.dispatch(_addPlanets(planets))
 export const setPlanetsNextPage = page => store.dispatch(_setPlanetsNextPage(page))
 export const setPlanetsHasMore = hasMore => store.dispatch(_setPlanetsHasMore(hasMore))
 
-// SpaceShips
-export const useSpaceShips = () => useSelector(state => state.spaceShips)
-export const useSpaceShip = id => useSelector(state => state.spaceShips.results.filter(spaceShip => spaceShip.id === id)[0])
-export const addSpaceShips = spaceShips => store.dispatch(_addSpaceShips(spaceShips))
+// Ships
+export const useShips = () => useSelector(state => state.ships)
+export const useSpaceShip = id => useSelector(state => state.ships.results.filter(ship => ship.id === id)[0])
+export const addShips = ships => store.dispatch(_addShips(ships))
 
-export const setSpaceShipsNextPage = page => store.dispatch(_setSpaceShipsNextPage(page))
-export const setSpaceShipsHasMore = hasMore => store.dispatch(_setSpaceShipsHasMore(hasMore))
+export const setShipsNextPage = page => store.dispatch(_setShipsNextPage(page))
+export const setShipsHasMore = hasMore => store.dispatch(_setShipsHasMore(hasMore))
 
 // Vehicles
 export const useVehicles = () => useSelector(state => state.vehicles)
@@ -39,13 +39,13 @@ export const addVehicles = vehicles => store.dispatch(_addVehicles(vehicles))
 export const setVehiclesNextPage = page => store.dispatch(_setVehiclesNextPage(page))
 export const setVehiclesHasMore = hasMore => store.dispatch(_setVehiclesHasMore(hasMore))
 
-// People
-export const usePeople = () => useSelector(state => state.people)
-export const usePerson = id => useSelector(state => state.people.results.filter(person => person.id === id)[0])
-export const addPeople = people => store.dispatch(_addPeople(people))
+// Characters
+export const useCharacters = () => useSelector(state => state.characters)
+export const usePerson = id => useSelector(state => state.characters.results.filter(character => character.id === id)[0])
+export const addCharacters = characters => store.dispatch(_addCharacters(characters))
 
-export const setPeopleNextPage = page => store.dispatch(_setPeopleNextPage(page))
-export const setPeopleHasMore = hasMore => store.dispatch(_setPeopleHasMore(hasMore))
+export const setCharactersNextPage = page => store.dispatch(_setCharactersNextPage(page))
+export const setCharactersHasMore = hasMore => store.dispatch(_setCharactersHasMore(hasMore))
 
 // Films
 export const useFilms = () => useSelector(state => state.films)
@@ -55,10 +55,10 @@ export const addFilms = films => store.dispatch(_addFilms(films))
 export const setFilmsNextPage = page => store.dispatch(_setFilmsNextPage(page))
 export const setFilmsHasMore = hasMore => store.dispatch(_setFilmsHasMore(hasMore))
 
-// Species
-export const useSpecies = () => useSelector(state => state.species)
-export const useSpecies_ = id => useSelector(state => state.species.results.filter(species => species.id === id)[0])
-export const addSpecies = species => store.dispatch(_addSpecies(species))
+// Races
+export const useRaces = () => useSelector(state => state.races)
+export const useRaces_ = id => useSelector(state => state.races.results.filter(race => race.id === id)[0])
+export const addRaces = races => store.dispatch(_addRaces(races))
 
-export const setSpeciesNextPage = page => store.dispatch(_setSpeciesNextPage(page))
-export const setSpeciesHasMore = hasMore => store.dispatch(_setSpeciesHasMore(hasMore))
+export const setRacesNextPage = page => store.dispatch(_setRacesNextPage(page))
+export const setRacesHasMore = hasMore => store.dispatch(_setRacesHasMore(hasMore))
