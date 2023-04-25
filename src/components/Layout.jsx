@@ -5,6 +5,7 @@ import { useNavbar, setClose } from "~/utils/store"
 import Footer from "./Footer"
 import Header from "./Header"
 import Navbar from "./Header/Navbar"
+import ScrollToTop from './ScrollToTop'
 
 function Layout() {
   const { width } = useWindowSize()
@@ -13,6 +14,7 @@ function Layout() {
   return (
     <>
         <Header ref={headerRef} />
+        <ScrollToTop />
         <div onClick={() => setClose()} className="flex min-h-[80%]">
           <div className={`${isOpen ? 'pointer-events-none opacity-50 ' : ''}flex flex-1 flex-col`}>
             <div className="flex-1"><Outlet /></div>

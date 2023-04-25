@@ -20,6 +20,7 @@
     "react-infinite-scroll-component": "^6.1.0",
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.10.0",
+    "react-scroll": "^1.8.9",
     "react-use": "^17.4.0",
     "sort-by": "^1.2.0"
   },

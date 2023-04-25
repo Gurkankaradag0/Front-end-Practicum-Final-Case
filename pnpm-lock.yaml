@@ -34,6 +34,9 @@ dependencies:
   react-router-dom:
     specifier: ^6.10.0
     version: 6.10.0(react-dom@18.2.0)(react@18.2.0)
+  react-scroll:
+    specifier: ^1.8.9
+    version: 1.8.9(react-dom@18.2.0)(react@18.2.0)
   react-use:
     specifier: ^17.4.0
     version: 17.4.0(react-dom@18.2.0)(react@18.2.0)
@@ -1130,6 +1133,10 @@ packages:
       lie: 3.1.1
     dev: false
 
+  /lodash.throttle@4.1.1:
+    resolution: {integrity: sha512-wIkUCfVKpVsWo3JSZlc+8MB5it+2AN5W8J7YVMST30UrvcQNZ1Okbj+rbVniijTWE6FGYy4XJq/rHkas8qJMLQ==}
+    dev: false
+
   /loose-envify@1.4.0:
     resolution: {integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==}
     hasBin: true
@@ -1484,6 +1491,18 @@ packages:
     dependencies:
       '@remix-run/router': 1.5.0
       react: 18.2.0
+    dev: false
+
+  /react-scroll@1.8.9(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-9m7ztraiX/l6L7erzYAD3fhnveNckei6/NkWfqwN2e0FRdoE2W6Pk4oi2Nah7mWpPCPAeIgegfaqZACTimPOwg==}
+    peerDependencies:
+      react: ^15.5.4 || ^16.0.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^15.5.4 || ^16.0.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      lodash.throttle: 4.1.1
+      prop-types: 15.8.1
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
     dev: false
 
   /react-side-effect@2.1.2(react@18.2.0):
