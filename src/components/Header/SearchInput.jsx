@@ -4,16 +4,22 @@ import { useState } from "react"
 import { Icon } from "~/Icons"
 import { useWindowSize } from "react-use"
 import { useRef } from "react"
+import { useNavigate } from "react-router-dom"
 
 function SearchInput({setInputFocus}) {
     const { width } = useWindowSize()
     const [focus, setFocus] = useState(false)
     const [value, setValue] = useState('')
     const ref = useRef()
+
+    const navigate = useNavigate()
+
     const submitHandle = (e) => {
         e.preventDefault()
 
-        //TODO 
+        navigate('/search', {
+            state: {search: value}
+        })
 
         setFocus(false)
         setValue('')

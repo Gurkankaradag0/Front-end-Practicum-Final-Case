@@ -13,6 +13,7 @@ import Races from "./pages/Races"
 import Detail from './pages/Detail'
 
 import Page404 from "./pages/Page404"
+import Search from './pages/Search'
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
           <Route index={true} element={<Races />}/>
           <Route path=":id" element={<Detail category="races" />}/>
         </Route>
+        <Route path='/search' element={<Search />}/>
         <Route path='*' element={<Page404 />}/>
       </Route>
     </Routes>
