@@ -21,27 +21,27 @@ function App() {
         <Route index={true} element={<Home />}/>
         <Route path="/planets">
           <Route index={true} element={<Planets />}/>
-          <Route path=":id" element={<Detail />}/>
+          <Route path=":id" element={<Detail category="planets" />}/>
         </Route>
         <Route path="/ships">
           <Route index={true} element={<Ships />}/>
-          <Route path=":id" element={<Detail />}/>
+          <Route path=":id" element={<Detail category="ships" />}/>
         </Route>
         <Route path="/vehicles">
           <Route index={true} element={<Vehicles />}/>
-          <Route path=":id" element={<Detail />}/>
+          <Route path=":id" element={<Detail category="vehicles" />}/>
         </Route>
         <Route path="/characters">
           <Route index={true} element={<Characters />}/>
-          <Route path=":id" element={<Detail />}/>
+          <Route path=":id" element={<Detail category="characters" />}/>
         </Route>
         <Route path="/films">
           <Route index={true} element={<Films />}/>
-          <Route path=":id" element={<Detail />}/>
+          <Route path=":id" element={<Detail category="films" />}/>
         </Route>
         <Route path="/races">
           <Route index={true} element={<Races />}/>
-          <Route path=":id" element={<Detail />}/>
+          <Route path=":id" element={<Detail category="races" />}/>
         </Route>
         <Route path='*' element={<Page404 />}/>
       </Route>

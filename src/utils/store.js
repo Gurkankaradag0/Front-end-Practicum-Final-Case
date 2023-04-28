@@ -16,7 +16,7 @@ export const setOpen = () => store.dispatch(_setOpen())
 export const setClose = () => store.dispatch(_setClose())
 
 // Detail Hook
-export const useDetail = (category, id) => useSelector(state => state[category].results.find(result => result.id === id))
+export const getDetails = category => store.getState()[category].results
 
 // Planets
 export const usePlanets = () => useSelector(state => state.planets)

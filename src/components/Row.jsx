@@ -1,11 +1,8 @@
-import { useMemo } from "react"
 import { Link } from "react-router-dom"
 
 function Row({ result, category }) {
 
-  const title = useMemo(() => {
-    return result.name ? result.name : result.title
-  }, [])
+  const title = result.name ? result.name : result.title
 
   return (
     <Link to={`/${category}/${result.id}`} className="h-[300px] m-auto w-full max-w-[600px] flex items-center relative">
@@ -26,6 +23,10 @@ function Row({ result, category }) {
               <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1536405222/starwars/item-1-bg.webp" alt={title} className="rounded-[30px] absolute top-0 left-0 w-full h-full block object-cover" />
               <div className="pt-[1px] relative z-20 w-full pl-[150px] pr-[80px] flex flex-col justify-center gap-y-4 max-[300px]:pl-[130px] max-[275px]:pl-[110px] max-[250px]:pl-[90px]">
                 <h1 className="font-bold text-2xl">{title}</h1>
+                {
+                  result?.model && 
+                  <h1 className="font-semibold text-sm">{result.model}</h1>
+                }
               </div>
             </div>
           </div>

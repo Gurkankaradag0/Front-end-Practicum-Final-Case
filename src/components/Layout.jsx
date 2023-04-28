@@ -15,7 +15,7 @@ function Layout() {
     <>
         <Header ref={headerRef} />
         <ScrollToTop />
-        <div onClick={() => setClose()} className="flex min-h-[80%]">
+        <div onClick={() => isOpen && setClose()} className="flex min-h-[80%]">
           <div className={`${isOpen ? 'pointer-events-none opacity-50 ' : ''}flex flex-1 flex-col`}>
             <div className="flex-1"><Outlet /></div>
             <Footer />
