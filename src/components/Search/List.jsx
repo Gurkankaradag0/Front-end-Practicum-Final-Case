@@ -5,7 +5,7 @@ function List( { data, category, loadMoreHandle, singelLoad } ) {
     return (
         <>
             <div
-                className="grid grid-cols-2 max-[1300px]:grid-cols-1 px-16 relative py-8 max-[750px]:px-12 max-[650px]:px-10 max-[550px]:px-8 max-[450px]:px-6 max-[350px]:px-4"
+                className={`grid ${data.results.length === 1 ? "grid-cols-1" : "grid-cols-2"} max-[1300px]:grid-cols-1 px-16 relative py-8 max-[750px]:px-12 max-[650px]:px-10 max-[550px]:px-8 max-[450px]:px-6 max-[350px]:px-4`}
             >
                 {
                     data.results.map((result, index) => (
