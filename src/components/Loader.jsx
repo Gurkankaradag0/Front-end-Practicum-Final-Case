@@ -1,9 +1,16 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import classNames from "classnames"
 
 function Loader() {
     const [checked, setChecked] = useState(true)
     const [hover, setHover] = useState(false)
+
+    useEffect(() => {
+        setTimeout(() => {
+            setChecked(!checked)
+        }, 650)
+    }, [checked])
+
     return (
         <div className="flex justify-center items-center mb-6 absolute bottom-0 w-full">
             <div className="-rotate-90-x-180">
