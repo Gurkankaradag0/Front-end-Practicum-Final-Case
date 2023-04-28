@@ -1,13 +1,12 @@
 import { Icon } from "~/Icons"
 import { Link } from "react-router-dom"
 import { useWindowSize } from "react-use"
-import { useEffect, forwardRef } from "react"
+import { useEffect, forwardRef, useState } from "react"
 
 import { useNavbar, setOpen, setClose } from "~/utils/store"
 import Hamburger from "./Hamburger"
 import SearchInput from "./SearchInput"
 import NavbarRow from "./NavbarRow"
-import { useState } from "react"
 
 function Header(props, ref) {
   const { width } = useWindowSize()

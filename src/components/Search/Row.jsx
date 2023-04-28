@@ -1,7 +1,7 @@
+import { memo } from "react"
 import { Link } from "react-router-dom"
 
 function Row({ result, category }) {
-
   const title = result.name ? result.name : result.title
 
   return (
@@ -36,4 +36,4 @@ function Row({ result, category }) {
   )
 }
 
-export default Row
+export default memo(Row)

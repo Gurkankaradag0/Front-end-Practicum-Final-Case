@@ -1,3 +1,4 @@
+import { memo } from "react"
 import { Link } from "react-router-dom"
 
 function Row({ result, category }) {
@@ -36,4 +37,4 @@ function Row({ result, category }) {
   )
 }
 
-export default Row
+export default memo(Row)

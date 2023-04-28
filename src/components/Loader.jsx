@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, memo } from "react"
 import classNames from "classnames"
 
 function Loader() {
@@ -46,4 +46,4 @@ function Loader() {
     )
 }
 
-export default Loader
+export default memo(Loader)
