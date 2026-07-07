@@ -1,150 +1,255 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@theme {
+    --font-glyphicons: 'StarWarsGlyphicons', sans-serif;
+
+    --color-switch-default: #b94a37;
+    --color-switch-hover: #c09853;
+    --color-switch-checked: #468847;
+
+    --color-yoda-from: rgb(135 220 90);
+    --color-yoda-via: rgb(254 254 254);
+    --color-yoda-to: rgb(135 220 90);
+
+    --color-label-from: rgb(226 226 226);
+    --color-label-via: rgb(209 209 209);
+    --color-label-to: rgb(254 254 254);
+
+    --shadow-bun-top: #f00 0px 0px 10px 1px;
+    --shadow-bun-bottom: #0ff 0px 0px 10px 1px;
+    --shadow-filling: #0f0 0px 0px 10px 1px;
+
+    --animate-yoda: yoda 2s infinite;
+    --animate-filling-in: green-ls-in 0.8s ease forwards;
+    --animate-filling-out: green-ls-out 0.8s ease forwards;
+
+    @keyframes yoda {
+        from {
+            box-shadow: 0 0 10px #7ec855;
+        }
+        50% {
+            box-shadow: 0 0 16px #7ec855;
+        }
+        to {
+            box-shadow: 0 0 10px #7ec855;
+        }
+    }
+
+    @keyframes green-ls-in {
+        0% {
+            transform: translate(-50%, -50%) rotate(180deg);
+        }
+        50% {
+            transform: translate(-50%, -50%) rotate(-90deg);
+        }
+        100% {
+            transform: translate(-50%, -50%) rotate(-90deg) translate(200%, 0%);
+        }
+    }
+
+    @keyframes green-ls-out {
+        0% {
+            transform: translate(-50%, -200%) rotate(-90deg);
+        }
+        50% {
+            transform: translate(-50%, -50%) rotate(-90deg);
+        }
+        100% {
+            transform: translate(-50%, -50%) rotate(180deg);
+        }
+    }
+}
+
+@utility saber-upright {
+    transform: rotate(-90deg) rotateX(180deg) translateY(160px);
+}
+
+@utility rotate-filling-active {
+    transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+@utility rotate-bun-bottom-active {
+    transform: translate(-50%, -50%) rotate(405deg);
+}
+
+@utility rotate-bun-top-active {
+    transform: translate(-50%, -50%) rotate(-225deg);
+}
+
+@utility rotate-filling {
+    transform: translate(-50%, -50%) rotate(180deg);
+}
+
+@utility rotate-bun {
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+
+@utility translate-0-45 {
+    transform: translate(0%, -45%);
+}
+
+@utility transition-bun-filling {
+    transition: top 0.4s ease 0.4s, transform 0.4s ease 0.4s;
+}
+
+@utility transition-before-after {
+    transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+@utility transition-bun-active {
+    transition: top 0.4s ease, transform 0.4s ease;
+}
 
 @layer base {
-  @font-face {
-    font-family: "StarWarsGlyphicons";
-    src: url("./fonts/starwars-glyphicons-webfont.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-  }
-
-  html,
-  body,
-  #root {
-    @apply bg-black h-full text-white antialiased;
-    font-family: "Poppins", sans-serif;
-  }
-
-  ::-webkit-scrollbar {
-    @apply rounded-full w-2;
-  }
-
-  ::-webkit-scrollbar-track {
-    @apply bg-black;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    @apply rounded-full w-2 bg-white/25;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    @apply bg-white/50;
-  }
-
-  #contours {
-    fill: none;
-    stroke: white;
-    stroke-width: 2;
-    stroke-miterlimit: 10;
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    animation: draw 5s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-    animation-timing-function: linear;
-  }
-  #contours-visage {
-    fill: none;
-    stroke: white;
-    stroke-width: 2;
-    stroke-miterlimit: 10;
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    animation: draw 5s;
-    animation-delay: 1s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-    animation-timing-function: linear;
-  }
-
-  #details {
-    fill: none;
-    stroke: white;
-    stroke-width: 1;
-    stroke-miterlimit: 10;
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    animation: draw 10s;
-    animation-delay: 1s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-    animation-timing-function: linear;
-  }
-  #details-visage {
-    fill: none;
-    stroke: white;
-    stroke-width: 1;
-    stroke-miterlimit: 10;
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    animation: draw 15s;
-    animation-delay: 1s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-    animation-timing-function: linear;
-  }
-  #details-visage-2 {
-    fill: none;
-    stroke: white;
-    stroke-width: 0.5;
-    stroke-miterlimit: 10;
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    animation: draw 35s;
-    animation-delay: 1s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-    animation-timing-function: linear;
-  }
-  #eyes-color {
-    opacity: 0;
-    fill: white;
-    animation: show 4s;
-    animation-delay: 1s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in-out;
-  }
-
-  #light-saber {
-    opacity: 0;
-    fill: url(#gradient);
-    filter: url(#f1);
-    animation: plasma 1s;
-    animation-delay: 3.5s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in-out;
-  }
-  #light-saber-2 {
-    fill: none;
-    stroke: white;
-    stroke-width: 1;
-    stroke-miterlimit: 10;
-    stroke-dasharray: 4000;
-    stroke-dashoffset: 4000;
-    animation: draw 3s;
-    animation-delay: 3.5s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in-out;
-  }
-
-  @keyframes draw {
-    to {
-      stroke-dashoffset: 0;
+    @font-face {
+        font-family: 'StarWarsGlyphicons';
+        src: url('./fonts/starwars-glyphicons-webfont.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
     }
-  }
-  @keyframes show {
-    to {
-      opacity: 1;
+
+    html,
+    body,
+    #root {
+        @apply bg-black h-full text-white antialiased;
+        font-family: 'Poppins', sans-serif;
     }
-  }
-  @keyframes plasma {
-    to {
-      opacity: 1;
+
+    ::-webkit-scrollbar {
+        @apply rounded-full w-2;
     }
-  }
+
+    ::-webkit-scrollbar-track {
+        @apply bg-black;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        @apply rounded-full w-2 bg-white/25;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        @apply bg-white/50;
+    }
+
+    #contours {
+        fill: none;
+        stroke: white;
+        stroke-width: 2;
+        stroke-miterlimit: 10;
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        animation: draw 5s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+        animation-timing-function: linear;
+    }
+
+    #contours-visage {
+        fill: none;
+        stroke: white;
+        stroke-width: 2;
+        stroke-miterlimit: 10;
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        animation: draw 5s;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+        animation-timing-function: linear;
+    }
+
+    #details {
+        fill: none;
+        stroke: white;
+        stroke-width: 1;
+        stroke-miterlimit: 10;
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        animation: draw 10s;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+        animation-timing-function: linear;
+    }
+
+    #details-visage {
+        fill: none;
+        stroke: white;
+        stroke-width: 1;
+        stroke-miterlimit: 10;
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        animation: draw 15s;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+        animation-timing-function: linear;
+    }
+
+    #details-visage-2 {
+        fill: none;
+        stroke: white;
+        stroke-width: 0.5;
+        stroke-miterlimit: 10;
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        animation: draw 35s;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+        animation-timing-function: linear;
+    }
+
+    #eyes-color {
+        opacity: 0;
+        fill: white;
+        animation: show 4s;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in-out;
+    }
+
+    #light-saber {
+        opacity: 0;
+        fill: url(#gradient);
+        filter: url(#f1);
+        animation: plasma 1s;
+        animation-delay: 3.5s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in-out;
+    }
+
+    #light-saber-2 {
+        fill: none;
+        stroke: white;
+        stroke-width: 1;
+        stroke-miterlimit: 10;
+        stroke-dasharray: 4000;
+        stroke-dashoffset: 4000;
+        animation: draw 3s;
+        animation-delay: 3.5s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in-out;
+    }
+
+    @keyframes draw {
+        to {
+            stroke-dashoffset: 0;
+        }
+    }
+
+    @keyframes show {
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes plasma {
+        to {
+            opacity: 1;
+        }
+    }
 }
